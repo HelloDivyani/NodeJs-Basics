@@ -3,7 +3,6 @@ time=0;
 var say = function()
 {
 	console.log('bye');
-	
 };
 //say();
 
@@ -11,8 +10,8 @@ var say = function()
 var timer = setInterval(function(){
 	time+=2;
 	console.log(time+" have passed");
-	say(); //function call
-	if(time > 4	) 
+	//say(); //function call
+	if(time > 4) 
 	{
 		console.log("This is Timer : "+timer);
 		clearInterval(timer);
@@ -22,3 +21,8 @@ var timer = setInterval(function(){
 
 // anomous function
 
+function callFunction(fun)
+{
+	fun();
+}
+callFunction(say);
