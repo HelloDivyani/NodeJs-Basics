@@ -90,7 +90,15 @@ fs.readFile('readMe.txt','utf-8',function(err,data){
 	fs.writeFile('writeMe.txt',data);
 });
 
-
+// For Deleting the file  : 
+// fs.unlink('writeMe.txt');
+// Creating and Removing Directories
+// Synchronus
+//fs.mkdirSync('myDir');
+//console.log("*******************************************************************88Directory Created .... ");
+//fs.rmdirSync('myDir');
+//console.log('*************************************Directory Deleted Synchronous ----');
+// Asynchronous Creation of Directory :
 
 
 
