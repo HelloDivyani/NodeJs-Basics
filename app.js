@@ -29,9 +29,9 @@ callFunction(say);
 
 // require calls the module specified
 var stuff = require('./stuff'); // in same directory
-console.log("The stuff : "+stuff.adder(3,4));
+console.log("The stuff : "+stuff.myAdder(3,4));
 //console.log("The myCounter Data : "+myCounter); // return the complete code
 
-console.log('In app There are '+stuff.counter(['123','213']));
-console.log('In addition  '+stuff.adder(stuff.pi,stuff.pi));
+console.log('In app There are '+stuff.myCounter(['123','213']));
+console.log('In addition  '+stuff.myAdder(stuff.myPi,stuff.myPi));
 
