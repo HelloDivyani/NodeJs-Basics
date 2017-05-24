@@ -74,4 +74,25 @@ console.log(msg);
 });
 
 myEmitter.emit('someEvent','My Message');
+// Reading and Writing Files : 
+
+//fs is core module
+var fs = require('fs');
+
+var readMe = fs.readFileSync('readMe.txt','utf-8');
+console.log("File Reading operation Done and read Data is :"+readMe);
+fs.writeFileSync('writeMe.txt',readMe);
+console.log("Synchronous Calling Done .... ");
+
+fs.readFile('readMe.txt','utf-8',function(err,data){
+	//Asynchronous Callback Done when reading Operation of readMe.txt is completed
+	console.log("Asynchronus Callback -----------------Data------Read from Asynchronous : "+data);
+	fs.writeFile('writeMe.txt',data);
+});
+
+
+
+
+
+
 
