@@ -6,7 +6,7 @@ var say = function()
 };
 //say();
 
-
+// Always Called at Last
 var timer = setInterval(function(){
 	time+=2;
 	console.log(time+" have passed");
@@ -26,3 +26,10 @@ function callFunction(fun)
 	fun();
 }
 callFunction(say);
+
+// require calls the module specified
+var myCounter = require('./count'); // in same directory
+//console.log("The myCounter Data : "+myCounter); // return the complete code
+
+console.log('In app There are '+myCounter(['123','213']));
+
