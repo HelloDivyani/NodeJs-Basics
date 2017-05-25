@@ -99,8 +99,22 @@ fs.readFile('readMe.txt','utf-8',function(err,data){
 //fs.rmdirSync('myDir');
 //console.log('*************************************Directory Deleted Synchronous ----');
 // Asynchronous Creation of Directory :
+/*fs.mkdir('myDir',function(err)
+{
+	fs.readFile('readMe.txt','utf-8',function(err,data){
+	//Asynchronous Callback Done when reading Operation of readMe.txt is completed
+	console.log("Asynchronus Callback -----------------Data------Read from Asynchronous : "+data);
+	fs.writeFile('writeMe.txt',data);
+});
+console.log('-----------------------------------------------************************************Asynchronous Directory Creation --------------------');
 
-
+});
+fs.unlink('writeMe.txt',function(){
+	fs.rmdir('myDir');
+	console.log("Removed Directory");
+});
+**/
+//console.log("Done------------------------------------()()()()()");
 
 
 
